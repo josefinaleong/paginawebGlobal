@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAYMONT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="https://www.flaticon.es/svg/static/icons/svg/102/102327.svg" type="image/x-icon">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header>
+        <div class="top-header">
+           <a href="#"><img src="https://www.flaticon.es/svg/static/icons/svg/145/145802.svg" alt=""></a>
+                <a href="#"><img src="https://www.flaticon.es/svg/static/icons/svg/2111/2111463.svg" alt=""></a>
+        </div>
+        <div class="contenedor">
+        <div class="logo">
+            <img src="https://i.postimg.cc/7Lk2Zqn6/Logo-Makr-6-DKTqa.png" alt="logo">
+        </div>
+                    </div>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="toys.html">Tienda</a>
+                <a href="contact.html">Contacto</a>
+                <a href="contact.html">Sobre Nosotros</a>
+            </nav>
+          </div>
+        </header>
+    <main>
+              
+        
+        <article>
+          <h1>Order</h1>
+          <div class="product-container">
+            <img src="">
+            <div class="info">
+                <div class="title"></div>
+                <div class="price"></div>                
+            </div>
+        </div>
+          <form action="http://jkorpela.fi/cgi-bin/echo.cgi", method="POST">
+              <div class="input-group">
+                  <div class="">
+                      <label for="first-name">First Name </label>
+                  </div>
+                  <div>
+                      <input type="text" name="first-name" id="first-name" >
+                  </div>
+                  <div class="">
+                    <label for="adress">Adress </label>
+                </div>
+                <div>
+                    <input type="text" name="adress" id="adress" >
+                </div>
+                <div class="">
+                    <label for="phone">Phone </label>
+                </div>
+                <div>
+                    <input type="text" name="phone" id="phone" >
+                </div>
+              </div>
+              <input type="reset" value="Reset">
+              <input type="submit" value="order">
+          </form>
+       
+    </article>
+    </main>
+    
+    <footer>
+    
+        <div class="top-footer">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="toys.html">Tienda</a>
+                <a href="contact.html">Contacto</a>  
+                <a href="aboutus.html">Quiénes somos</a>
+            </nav>
+            
+            <div class="bottom-footer">
+                <p>&copy; Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded",() => {
+        const order = localStorage.getItem("order");
+        if(order){
+            const toyOrder = JSON.parse(order);
+            const toys = document.querySelector(".product-container");
+            const title = toys.querySelector(".title");
+            const price = toys.querySelector(".price");
+
+            title.innerText = toyOrder.title;
+            price.innerText = toyOrder.price;
+            
+            const img = toys.querySelector("img");
+            img.setAttribute("src", `img/${toyOrder.id}.jpg`)
+
+        }
+    })
+</script>
+</html>

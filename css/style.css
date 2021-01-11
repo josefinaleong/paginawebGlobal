@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.top-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-header img {
+  height: 25px;
+  margin: 5px;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1170px;
+  margin: auto;
+}
+
+header .contenedor {
+  display: flex;
+  justify-content: space-around;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  background-color: #fcfff5;
+}
+
+.logo {
+  padding: 25px 0;
+}
+
+.logo img {
+  width: 200px;
+  display: block;
+  margin: 30px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 55px 0;
+}
+
+.menu a {
+  padding-left: 50px;
+  text-decoration: none;
+  color: #020202;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.menu a:hover {
+  color: #390099;
+}
+
+.banner {
+  width: 100%;
+  height: 500px;
+  background-image: url(https://images.unsplash.com/photo-1596064459298-e41e6c08fa7f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8bW9udGVzc29yaXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner .fondo {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(209, 219, 189, 0.5);
+}
+
+.ban {
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.ban p {
+  font-size: 18px;
+  color: #ff5400;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.ban h2 {
+  font-size: 42px;
+  color: #390099;
+  width: 100%;
+  display: block;
+  max-width: 470px;
+}
+
+.ban a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(57, 0, 153, 0.47);
+  padding: 10px 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.ban a:hover {
+  background-color: rgba(57, 0, 153, 0.7);
+}
+
+.top-footer {
+  margin-top: 10px;
+}
+.top-footer a {
+  padding-left: 50px;
+  text-decoration: none;
+  color: #020202;
+  text-transform: capitalize;
+  font-size: 20px;
+  text-align: center;
+}
+
+.bottom-footer {
+  background-color: #fcfff5;
+  height: 25px;
+  color: #020202;
+  font-size: 12px;
+  text-align: center;
+}
+
+/*catalogo*/
+
+.page-content {
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.product-container {
+  border-radius: 5px;
+  margin-left: 15px;
+  padding: 2px 16px;
+  margin: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+.product-container img {
+  width: 300px;
+}
+
+.product-container:hover {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.data-order {
+  text-decoration: none;
+  transition-duration: 0.4s;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  border: 2px solid #4caf50; /* Green */
+}
+
+.data-order:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-container .title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.product-container .price {
+  text-align: right;
+  margin-bottom: 2px;
+}
+
+/*formulario de contacto*/
+.form-wrapper {
+  background-image: url(fondo.webp);
+}
+form {
+  width: 450px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  border-radius: 7px;
+}
+
+.contact-title {
+  font-size: 30px;
+  color: #390099;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 7px;
+  font-size: 17px;
+  border: none;
+  border-radius: 7px;
+}
+
+textarea {
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+}
+
+.form-button {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(57, 0, 153, 0.47);
+  padding: 10px 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-button:hover {
+  background-color: rgba(57, 0, 153, 0.7);
+}
